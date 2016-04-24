@@ -36,14 +36,12 @@ void printArray(T &myArray){
 	}
 }
 
-int convertToX(int queenPosition){
-	int xCoordinate=(queenPosition%BOARD_SIZE);
-	return xCoordinate;
+inline int convertToX(int queenPosition){
+	return (queenPosition%BOARD_SIZE);
 }
 
-int convertToY(int queenPosition){
-	int yCoordinate=(queenPosition-(queenPosition%BOARD_SIZE))/BOARD_SIZE;
-	return yCoordinate;
+inline int convertToY(int queenPosition){
+	return ((queenPosition-(queenPosition%BOARD_SIZE))/BOARD_SIZE);
 }
 
 bool isUnderAttack(int queenPosition2, int queenPosition1){
